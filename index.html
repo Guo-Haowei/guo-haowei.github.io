@@ -4,7 +4,6 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!--tab icon-->
-    <!-- <link rel="icon" type="image/png" href="images/avatar.png"> -->
     <title>Haowei Guo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
@@ -26,7 +25,11 @@
     <script src="scripts/controller.js"></script>
 
     <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-1 w3-opacity w3-display-container">
+    <div class="header-1 w3-opacity w3-display-container" id="header">
+        <div class="w3-display-left">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"
+                onclick="playNextBackgrondImage(-1)"></span>
+        </div>
         <div class="w3-display-middle">
             <!-- <div class="w3-display-middle" style="white-space:nowrap;"> -->
             <br />
@@ -40,6 +43,10 @@
                 <!-- <div class="w3-display-middle w3-center" style="white-space:nowrap; font-size:150%; color:white" id="typedtext"></div> -->
                 <div class="w3-center" style="white-space:nowrap; font-size:150%; color:white" id="typedtext"></div>
             </div>
+        </div>
+        <div class="w3-display-right">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"
+                onclick="playNextBackgrondImage()"></span>
         </div>
     </div>
 
@@ -115,27 +122,13 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Pagination -->
-                <!-- <div class="row w3-section w3-padding-16 w3-center">
-                    <ul class="w3-pagination">
-                        <li><a class="w3-hover-black" href="#myPortfolio" ng-click="setPage(currentPage-1>=0?currentPage-1:totalPage-1)"><i class="fa fa-angle-left"></i></a></li>
-                        <li><a id="p0" href="#myPortfolio" class="w3-black" ng-click="setPage(0)">1</a></li>
-                        <li><a id="p1" href="#myPortfolio" class="w3-hover-black" ng-click="setPage(1)">2</a></li>
-                        <li><a id="p2" href="#myPortfolio" class="w3-hover-black" ng-click="setPage(2)">3</a></li>
-                        <li><a id="p3" href="#myPortfolio" class="w3-hover-black" ng-click="setPage(3)">4</a></li>
-                        <li><a class="w3-hover-black" href="#myPortfolio" ng-click="setPage(currentPage+1<totalPage?currentPage+1:0)"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
-                </div> -->
-
-
             </div>
         </div>
 
     </div>
 
     <!-- Second Parallax Image with Portfolio Text -->
-    <div class="bgimg-2 w3-display-container">
+    <div class="footer-1 w3-display-container">
         <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
         </div>

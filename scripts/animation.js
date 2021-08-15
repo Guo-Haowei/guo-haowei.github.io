@@ -74,3 +74,26 @@ function openNav() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+function playNextBackgrondImage(inc) {
+    inc = inc || 1;
+    const imageDiv = document.getElementById('header');
+    const oldBackground = imageDiv.classList[0];
+    let idx = parseInt(oldBackground.slice(-1));
+    idx += inc;
+    if (idx > 3) {
+        idx = 1;
+    } else if (idx < 1) {
+        idx = 3;
+    }
+
+    console.log(oldBackground);
+    imageDiv.className = `header-${idx.toString()} w3-opacity w3-display-container`;
+    console.log(imageDiv.className);
+}
+
+function autoPlayNextImage() {
+    playNextBackgrondImage();
+}
+
+setInterval(autoPlayNextImage, 10000);
