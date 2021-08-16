@@ -96,4 +96,4 @@ function autoPlayNextImage() {
     playNextBackgrondImage();
 }
 
-setInterval(autoPlayNextImage, 10000);
+setInterval(autoPlayNextImage, 15000);
