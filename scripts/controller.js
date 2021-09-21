@@ -27,7 +27,7 @@ const data = [
     [
         [
             {
-                href: 'https://github.com/Guo-Haowei/C-Interpreter',
+                href: 'https://github.com/Guo-Haowei/c.c',
                 img: 'project-c.png',
                 title: 'C Interpreter',
                 body: 'A self-hosting C interpreter in 1000 lines'
