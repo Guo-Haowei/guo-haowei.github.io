@@ -3,10 +3,11 @@ var app = angular.module('Portfolio', []);
 
 app.controller('appCtrl', function ($scope) {
     $scope.currentPage = 0;
-    $scope.currentPort = data[0];
+    $scope.currentPort = getdata();
     $scope.totalPage = 5;
     $scope.count = 0;
 
+    /*
     $scope.setPage = function (page) {
         var oldlable = document.getElementById('filter' + $scope.currentPage.toString());
         oldlable.className = 'w3-btn w3-white';
@@ -14,18 +15,26 @@ app.controller('appCtrl', function ($scope) {
         oldpage.className = 'w3-hover-black'
 
         $scope.currentPage = page;
-        $scope.currentPort = data[page];
+        $scope.currentPort = getdata()[page];
 
         var newlable = document.getElementById('filter' + page.toString());
         var newpage = document.getElementById('p' + page.toString());
         newlable.className = 'w3-btn w3-black';
         newpage.className = 'w3-black';
     }
+    */
 });
 
-const data = [
-    [
-        [
+let _data = null;
+const getdata = () => {
+    if (_data === null) {
+        const tags = [
+            {
+                href: 'https://github.com/Guo-Haowei/cc',
+                img: 'project-cc.png',
+                title: 'C Compiler',
+                body: 'A self-hosting C Compiler'
+            },
             {
                 href: 'https://github.com/Guo-Haowei/c.c',
                 img: 'project-c.png',
@@ -44,8 +53,6 @@ const data = [
                 title: 'Voxel Cone Tracing',
                 body: 'Implementation of Voxel Cone Tracing with OpenGL and C++'
             },
-        ],
-        [
             {
                 href: 'https://github.com/Guo-Haowei/Rasterizer',
                 img: 'project-sr.png',
@@ -64,8 +71,6 @@ const data = [
                 title: 'The Aviator',
                 body: 'My first game written with OpenGL and C++'
             },
-        ],
-        [
             {
                 href: 'pages/SuperCaveBoy/index.html',
                 img: 'project-super-caveboy.png',
@@ -77,7 +82,17 @@ const data = [
                 img: 'project-turn-based.png',
                 title: 'Turn Based Game',
                 body: 'A turn based RPG game written in JavaScript'
-            },
-        ]
-    ]
-];
+            }
+        ];
+        let tmp = [];
+        for (let i = 0; i < tags.length; i += 1) {
+            if (i % 3 === 0) {
+                tmp.push([]);
+            }
+            tmp[tmp.length - 1].push(tags[i]);
+        }
+        _data = tmp;
+    }
+
+    return _data;
+};
