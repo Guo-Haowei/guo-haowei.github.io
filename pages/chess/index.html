@@ -1,53 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <link rel="stylesheet" href="./styles.css" />
 
-    <title>Chess Engine</title>
-  <script type="module" crossorigin src="/pages/chess/assets/index-QKr6k_i_.js"></script>
-</head>
+    <title>BitboardX</title>
+    <script type="module" crossorigin src="/pages/chess/assets/index-BvGyekR4.js"></script>
+  </head>
 
-<body>
-    <div id="continer">
-        <!-- Canvas will be created programatically  -->
-        <canvas id="chessCanvas" width="600" height="600"></canvas>
+  <body>
+    <div class="chess-app">
+      <!-- Header with player info -->
+      <div class="header">
+        <div class="player you">
+          <img
+            class="avatar"
+            src="https://lichess1.org/assets/piece/cburnett/wK.svg"
+            alt="White"
+          />
+          <div class="info">
+            <div class="name">You</div>
+            <div class="timer" id="you-timer">0:00</div>
+          </div>
+        </div>
+        <div class="player opp">
+          <img
+            class="avatar"
+            src="https://lichess1.org/assets/piece/cburnett/bK.svg"
+            alt="Black"
+          />
+          <div class="info">
+            <div class="name">Bot</div>
+            <div class="timer" id="opp-timer">0:00</div>
+          </div>
+        </div>
+      </div>
 
-        <p></p>
-        <div class="player-section">
-            <legend>White</legend>
-            <label> <input type="radio" name="player1" value="human" checked /> Human </label>
-            <label> <input type="radio" name="player1" value="computer" /> Computer </label>
+      <!-- Chess board -->
+      <div class="board-container">
+        <canvas id="chess-board" width="320" height="320"></canvas>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button id="resume-button">Resume</button>
+        <button id="undo-button">Undo</button>
+      </div>
+
+      <div class="controls secondary">
+        <button disabled>Replay</button>
+        <button disabled>Board Style</button>
+      </div>
+
+      <!-- Move History -->
+      <div class="move-history">
+        <div class="move-text" contenteditable="true">
+          TODO: Add move history here: 1. e4 e5 2. Nf3 Nc6 3. Bb5 a6
         </div>
-        <p></p>
-        <div class="player-section">
-            <legend>Black</legend>
-            <label> <input type="radio" name="player2" value="human" /> Human </label>
-            <label> <input type="radio" name="player2" value="computer" checked /> Computer </label>
-        </div>
-        <p></p>
-        <input type="text" id="fenInput" style="width: 500px;" placeholder="please enter FEN here" />
-        <p></p>
-        <button id="fenButton">Go!</button>
-        <p></p>
+      </div>
+
+      <div class="player-section">
+        <legend>White</legend>
+        <label>
+          <input type="radio" name="white-player" value="human" checked /> Human
+        </label>
+        <label>
+          <input type="radio" name="white-player" value="bot" /> Bot
+        </label>
+      </div>
+      <p></p>
+      <div class="player-section">
+        <legend>Black</legend>
+        <label>
+          <input type="radio" name="black-player" value="human" /> Human
+        </label>
+        <label>
+          <input type="radio" name="black-player" value="bot" checked /> Bot
+        </label>
+      </div>
+      <p></p>
+      <input
+        type="text"
+        id="fen-input"
+        style="width: 300px"
+        placeholder="please enter FEN here"
+      />
+      <p></p>
+      <button id="start-button">Go!</button>
     </div>
-
-    <img id="img-wP" src="./img/wP.svg" style="display:none" alt="White Pawn">
-    <img id="img-bP" src="./img/bP.svg" style="display:none" alt="Black Pawn">
-    <img id="img-wN" src="./img/wN.svg" style="display:none" alt="White Knight">
-    <img id="img-bN" src="./img/bN.svg" style="display:none" alt="Black Knight">
-    <img id="img-wB" src="./img/wB.svg" style="display:none" alt="White Bishop">
-    <img id="img-bB" src="./img/bB.svg" style="display:none" alt="Black Bishop">
-    <img id="img-wR" src="./img/wR.svg" style="display:none" alt="White Rook">
-    <img id="img-bR" src="./img/bR.svg" style="display:none" alt="Black Rook">
-    <img id="img-wQ" src="./img/wQ.svg" style="display:none" alt="White Queen">
-    <img id="img-bQ" src="./img/bQ.svg" style="display:none" alt="Black Queen">
-    <img id="img-wK" src="./img/wK.svg" style="display:none" alt="White King">
-    <img id="img-bK" src="./img/bK.svg" style="display:none" alt="Black King">
 
-</body>
-
+  </body>
 </html>
