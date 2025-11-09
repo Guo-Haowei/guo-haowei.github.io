@@ -1,21 +1,3 @@
-var navbarState = false;
-
-function returnWidth() {
-    var width = parseInt(window.innerWidth);
-    if (width >= 750) {
-        return "400px";
-    } else {
-        return "300px";
-    }
-}
-
-function toggleNav() {
-    console.log(window.innerWidth);
-    if (!navbarState) {document.getElementById("myNav").style.width = returnWidth();}
-    else {document.getElementById("myNav").style.width = "0px";}
-    navbarState = !navbarState;
-}
-
 // set up text to print, each item in array is new line
 var aText = new Array(
     "Hello, I am Haowei Guo. I am a software engineer.",
@@ -52,28 +34,6 @@ function typewriter() {
 }
 
 typewriter();
-
-function myFunction(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-theme-d1";
-    } else {
-        x.className = x.className.replace("w3-show", "");
-        x.previousElementSibling.className =
-        x.previousElementSibling.className.replace(" w3-theme-d1", "");
-    }
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
 
 function playNextBackgrondImage(inc) {
     inc = inc || 1;
