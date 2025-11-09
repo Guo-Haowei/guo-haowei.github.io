@@ -10,23 +10,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 }
 
 .header-1 {
-    background-image: url('../images/sponza.png');
+    background-image: url('./sponza.png');
     min-height: 100%;
 }
 
 .header-2 {
-    background-image: url('../images/san-miguel.png');
+    background-image: url('./san-miguel.png');
     min-height: 100%;
 }
 
 .header-3 {
-    background-image: url('../images/room.png');
+    background-image: url('./room.png');
     min-height: 100%;
-}
-
-.footer-1 {
-    background-image: url('../images/footer.png');
-    min-height: 60%;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -107,31 +102,31 @@ html, body {
 }
 
 .overlay-content {
-    position: relative;
-    top: 10%;
-    width: 100%;
-    margin-left: 3rem;
-    margin-top: 5rem;
+  position: relative;
+  top: 10%;
+  width: 100%;
+  margin-left: 3rem;
+  margin-top: 5rem;
 }
 
 .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 24px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 24px;
 }
 
 @media screen and (max-height: 450px) {
@@ -143,4 +138,3 @@ html, body {
     right: 35px;
   }
 }
-
