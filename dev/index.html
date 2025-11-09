@@ -17,12 +17,14 @@
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <style>
     </style>
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
 </head>
 
 <body ng-app="Portfolio" ng-controller="appCtrl">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 
-    <script src="scripts/controller.js"></script>
+  <script src="src/controller.js"></script>
 
     <!-- First Parallax Image with Logo Text -->
     <div class="header-1 w3-opacity w3-display-container" id="header">
@@ -35,7 +37,7 @@
             <br />
             <br />
             <div class="w3-center">
-                <img src="images/Logo.png" id="logo">
+                <img src="Logo.png" id="logo">
             </div>
             <br>
             <br>
@@ -59,7 +61,7 @@
                 <div class="w3-card-2 w3-round w3-white">
                     <div class="w3-container">
                         <p class="w3-center">
-                            <img src="images/profile.png" style="height:240px;margin-top:10%;" alt="Profile">
+                            <img src="profile.png" style="height:240px;margin-top:10%;" alt="Profile">
                         </p>
                         <hr>
                         <p> I am interested in </p>
@@ -80,9 +82,7 @@
             <!-- End Left Column -->
 
             <!-- Container (About Section) -->
-            <!-- <div class="col-sm-12"> -->
             <div class="col-sm-9" style="float: right;">
-                <!-- text -->
                 <!-- Filter -->
                 <header class="w3-container" id="myPortfolio">
                     <h1 class="w3-center"> Portfolio </h1>
@@ -93,7 +93,7 @@
                     <div id="port" ng-repeat="x in currentPort">
                         <div class="row">
                             <div class="col-sm-4 card" ng-if="x.length >= 1">
-                                <a href="{{x[0].href}}"><img ng-src="images/{{x[0].img}}" style="width:100%"
+                                <a href="{{x[0].href}}"><img ng-src="{{x[0].img}}" style="width:100%"
                                         class="w3-hover-opacity w3-margin-top"></a>
                                 <br><br>
                                 <div class="w3-container w3-padding-16 w3-white w3-card-2 w3-round">
@@ -102,7 +102,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-4 card" ng-if="x.length >= 2">
-                                <a href="{{x[1].href}}"><img ng-src="images/{{x[1].img}}" style="width:100%"
+                                <a href="{{x[1].href}}"><img ng-src="{{x[1].img}}" style="width:100%"
                                         class="w3-hover-opacity w3-margin-top"></a>
                                 <br><br>
                                 <div class="w3-container w3-padding-16 w3-white w3-card-2 w3-round">
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-4 card" ng-if="x.length >= 3">
-                                <a href="{{x[2].href}}"><img ng-src="images/{{x[2].img}}" style="width:100%"
+                                <a href="{{x[2].href}}"><img ng-src="{{x[2].img}}" style="width:100%"
                                         class="w3-hover-opacity w3-margin-top"></a>
                                 <br><br>
                                 <div class="w3-container w3-padding-16 w3-white w3-card-2 w3-round">
@@ -145,7 +145,7 @@
         </footer>
     </div>
 
-    <script src="scripts/animation.js"></script>
+    <script src="src/animation.js"></script>
 </body>
 
 </html>
