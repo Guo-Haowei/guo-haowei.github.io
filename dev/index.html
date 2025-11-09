@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!--tab icon-->
     <title>Haowei Guo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,135 +16,64 @@
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <style>
     </style>
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
 </head>
 
-<body ng-app="Portfolio" ng-controller="appCtrl">
-  <div id="root"></div>
+<body>
+  <!-- Carousel -->
+  <div class="header-1 w3-opacity w3-display-container" style="background-image: url('/san-miguel.png'); min-height: 100%;" id="header">
+    <section id="carousel"></section>
+  </div>
+
+  <!-- Main Page -->
+  <div class="w3-container w3-content w3-light-grey" style="max-width:1400px">
+    <div class="row w3-padding-32">
+      <!-- Profile -->
+      <div class="col-sm-3" style="float: left;">
+        <div class="w3-card-2 w3-round w3-white">
+          <div class="w3-container">
+            <p class="w3-center">
+              <img src="profile.png" style="height:240px;margin-top:10%;" alt="Profile">
+            </p>
+            <hr>
+            <p> I am interested in </p>
+            <p><b> Computer Graphics </b></p>
+            <p><b> Web Development</b></p>
+            <p><b> Game Development </b></p>
+            <br>
+            <p><i class="fa fa-github fa-fw w3-margin-right w3-text-theme"></i><a href="https://github.com/Guo-Haowei">Github</a></p>
+            <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-text-theme"></i><a href="https://ca.linkedin.com/in/haowei-guo-b25192128">Linkedin</a></p>
+            <p><i class="fa fa-youtube fa-fw w3-margin-right w3-text-theme"></i><a href="https://www.youtube.com/channel/UCe1cR8HuNkIZE65YYYClDFQ">Youtube</a></p>
+          </div>
+        </div>
+        <br>
+      </div>
+
+      <!-- Cards -->
+      <div class="col-sm-9" style="float: right;">
+        <header class="w3-container" id="myPortfolio">
+          <h1 class="w3-center"> Portfolio </h1>
+        </header>
+
+        <section id="cards"></section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="w3-display-container" style="background-image: url('/footer.png'); min-height: 60%;">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+    </div>
+
+    <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center" id="myContact">
+      <br><br>
+      <a class="w3-btn-floating w3-teal" href="https://github.com/Guo-Haowei"><i class="fa fa-github"></i></a>
+      <a class="w3-btn-floating w3-teal w3-hide-small" href="https://ca.linkedin.com/in/haowei-guo-b25192128"><i class="fa fa-linkedin"></i></a>
+      <a class="w3-btn-floating w3-teal w3-hide-small" href="https://www.youtube.com/channel/UCe1cR8HuNkIZE65YYYClDFQ"><i class="fa fa-youtube"></i></a>
+    </footer>
+  </div>
+
   <script type="module" src="/src/main.jsx"></script>
-
-  <script src="src/controller.js"></script>
-
-    <!-- First Parallax Image with Logo Text -->
-    <div class="header-1 w3-opacity w3-display-container" id="header">
-        <div class="w3-display-left">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"
-                onclick="playNextBackgrondImage(-1)"></span>
-        </div>
-        <div class="w3-display-middle">
-            <!-- <div class="w3-display-middle" style="white-space:nowrap;"> -->
-            <br />
-            <br />
-            <div class="w3-center">
-                <img src="Logo.png" id="logo">
-            </div>
-            <br>
-            <br>
-            <div class="w3-content w3-container" id="about">
-                <!-- <div class="w3-display-middle w3-center" style="white-space:nowrap; font-size:150%; color:white" id="typedtext"></div> -->
-                <div class="w3-center" style="white-space:nowrap; font-size:150%; color:white" id="typedtext"></div>
-            </div>
-        </div>
-        <div class="w3-display-right">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"
-                onclick="playNextBackgrondImage()"></span>
-        </div>
-    </div>
-
-    <!-- Page Container -->
-    <div class="w3-container w3-content w3-light-grey" style="max-width:1400px">
-        <div class="row w3-padding-32">
-            <!-- Left Column -->
-            <div class="col-sm-3" style="float: left;">
-                <!-- Profile -->
-                <div class="w3-card-2 w3-round w3-white">
-                    <div class="w3-container">
-                        <p class="w3-center">
-                            <img src="profile.png" style="height:240px;margin-top:10%;" alt="Profile">
-                        </p>
-                        <hr>
-                        <p> I am interested in </p>
-                        <p><b> Computer Graphics </b></p>
-                        <p><b> Compiler Construction </b></p>
-                        <p><b> Game Development </b></p>
-                        <br>
-                        <p><i class="fa fa-github fa-fw w3-margin-right w3-text-theme"></i><a
-                                href="https://github.com/Guo-Haowei">Github</a></p>
-                        <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-text-theme"></i><a
-                                href="https://ca.linkedin.com/in/haowei-guo-b25192128">Linkedin</a></p>
-                        <p><i class="fa fa-youtube fa-fw w3-margin-right w3-text-theme"></i><a
-                                href="https://www.youtube.com/channel/UCe1cR8HuNkIZE65YYYClDFQ">Youtube</a></p>
-                    </div>
-                </div>
-                <br>
-            </div>
-            <!-- End Left Column -->
-
-            <!-- Container (About Section) -->
-            <div class="col-sm-9" style="float: right;">
-                <!-- Filter -->
-                <header class="w3-container" id="myPortfolio">
-                    <h1 class="w3-center"> Portfolio </h1>
-                </header>
-
-                <!-- Grid-->
-                <div class="row w3-section w3-padding-16 w3-center">
-                    <div id="port" ng-repeat="x in currentPort">
-                        <div class="row">
-                            <div class="col-sm-4 card" ng-if="x.length >= 1">
-                                <a href="{{x[0].href}}"><img ng-src="{{x[0].img}}" style="width:100%"
-                                        class="w3-hover-opacity w3-margin-top"></a>
-                                <br><br>
-                                <div class="w3-container w3-padding-16 w3-white w3-card-2 w3-round">
-                                    <h4 style="text-align:center"><b>{{x[0].title}}</b></h4>
-                                    <p>{{x[0].body}}</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 card" ng-if="x.length >= 2">
-                                <a href="{{x[1].href}}"><img ng-src="{{x[1].img}}" style="width:100%"
-                                        class="w3-hover-opacity w3-margin-top"></a>
-                                <br><br>
-                                <div class="w3-container w3-padding-16 w3-white w3-card-2 w3-round">
-                                    <h4 style="text-align:center"><b>{{x[1].title}}</b></h4>
-                                    <p>{{x[1].body}}</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 card" ng-if="x.length >= 3">
-                                <a href="{{x[2].href}}"><img ng-src="{{x[2].img}}" style="width:100%"
-                                        class="w3-hover-opacity w3-margin-top"></a>
-                                <br><br>
-                                <div class="w3-container w3-padding-16 w3-white w3-card-2 w3-round">
-                                    <h4 style="text-align:center"><b>{{x[2].title}}</b></h4>
-                                    <p>{{x[2].body}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <div class="footer-1 w3-display-container">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
-        </div>
-
-        <!-- Footer -->
-        <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center" id="myContact">
-            <br><br>
-            <!-- <a class="w3-btn-floating w3-teal" href="mailto:ghwhotline@gmail.com"><i class="fa fa-envelope"></i></a> -->
-            <a class="w3-btn-floating w3-teal" href="https://github.com/Guo-Haowei"><i class="fa fa-github"></i></a>
-            <a class="w3-btn-floating w3-teal w3-hide-small" href="https://ca.linkedin.com/in/haowei-guo-b25192128"><i
-                    class="fa fa-linkedin"></i></a>
-            <a class="w3-btn-floating w3-teal w3-hide-small"
-                href="https://www.youtube.com/channel/UCe1cR8HuNkIZE65YYYClDFQ"><i class="fa fa-youtube"></i></a>
-        </footer>
-    </div>
-
-    <script src="src/animation.js"></script>
 </body>
 
 </html>

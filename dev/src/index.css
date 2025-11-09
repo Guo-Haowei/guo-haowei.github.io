@@ -10,23 +10,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 }
 
 .header-1 {
-    background-image: url('../sponza.png');
+    background-image: url('./sponza.png');
     min-height: 100%;
 }
 
 .header-2 {
-    background-image: url('../san-miguel.png');
+    background-image: url('./san-miguel.png');
     min-height: 100%;
 }
 
 .header-3 {
-    background-image: url('../room.png');
+    background-image: url('./room.png');
     min-height: 100%;
-}
-
-.footer-1 {
-    background-image: url('../footer.png');
-    min-height: 60%;
 }
 
 .w3-wide {letter-spacing: 10px;}
