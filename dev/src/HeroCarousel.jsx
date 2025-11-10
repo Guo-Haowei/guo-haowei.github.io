@@ -27,7 +27,7 @@ export default function HeroCarousel({ slides, delay = 4000, loop = true }) {
               src={src}
               alt=""
               className="hero__img"
-              // First image eager, others lazy for 4K
+              // First image eager, others lazy
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
             />
