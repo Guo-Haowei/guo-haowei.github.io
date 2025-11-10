@@ -1,33 +1,38 @@
 import Cards from './Cards.jsx'
-import Carousel from './Carousel.jsx'
+import HeroCarousel from "./HeroCarousel";
 import ReactDOM from 'react-dom/client'
-import { playNextBackgroundImage } from './utilities.js';
+import './index.css';
 
 const cards = document.getElementById('cards')
 if (cards) {
   ReactDOM.createRoot(cards).render(<Cards />)
 }
 
-
 const carousel = document.getElementById('carousel')
 if (carousel) {
-  ReactDOM.createRoot(carousel).render(<Carousel />)
+  const slides = [
+    '/sponza.png',
+    '/san-miguel.png',
+    '/room.png',
+  ];
+
+  ReactDOM.createRoot(carousel).render(<HeroCarousel slides={slides} delay={4000} loop/>)
 }
 
 // @TODO: refactor this to React component
 // set up text to print, each item in array is new line
-var aText = new Array(
-    "Hello, I am Haowei Guo. I am a software engineer.",
-    "I CODE things."
-);
-var iSpeed = 70; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
+// var aText = new Array(
+//     "Hello, I am Haowei Guo. I am a software engineer.",
+//     "I CODE things."
+// );
+// var iSpeed = 70; // time delay of print out
+// var iIndex = 0; // start printing array at this posision
+// var iArrLength = aText[0].length; // the length of the text array
+// var iScrollAt = 20; // start scrolling up at this many lines
 
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
+// var iTextPos = 0; // initialise text position
+// var sContents = ''; // initialise contents variable
+// var iRow; // initialise current row
 
 function typewriter() {
     // sContents =  ' ';
